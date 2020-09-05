@@ -23,7 +23,7 @@ app.use(bodyParser.json());
     },
     {
       
-      nome: "Japdijadiopadjoadiaj",
+      nome: "Felipe Matheus",
       telefone: "12 2211 1212",
       id: 3
     }
@@ -58,7 +58,7 @@ function alterarPaciente(novoPaciente, id){
 }
 
 //ALTER
-app.put('/pacientes/:id', (request, response) => {
+app.put('/api/patients/:id', (request, response) => {
   var novoPaciente = request.body;
   var id = request.params.id;
   alterarPaciente(novoPaciente, id);
@@ -68,7 +68,7 @@ app.put('/pacientes/:id', (request, response) => {
 
 
 //READ
-app.get('/pacientes/:id' , (request, response) =>{
+app.get('/api/patients/:id' , (request, response) =>{
   console.log('Buscando id ' + request.params.id);
   var paciente = buscarPaciente(request.params.id);
   if(paciente == null){
@@ -78,7 +78,7 @@ app.get('/pacientes/:id' , (request, response) =>{
 });
 
 //DELETE
-app.delete('/pacientes/:id' , (request, response) => {
+app.delete('/api/patients/:id' , (request, response) => {
   var paciente = buscarPaciente(request.params.id);
   if(paciente == null){
     response.status(404);
@@ -89,20 +89,14 @@ app.delete('/pacientes/:id' , (request, response) => {
   response.end();
 });
 
-//REFRESH NA PAG ADICIONA UM PACIENTE
-app.get('/qtpacientes', (request, response) => {
-  response.send('A quantidade de pacientes é: ' + total++);
-});
-
-
 //LER LISTA INTEIRA
-app.get('/pacientes', (request, response) => {
+app.get('/api/patients', (request, response) => {
   response.json(lista);
 });
 
 
 //CREATE
-app.post('/pacientes', (request, response) => {
+app.post('/api/patients', (request, response) => {
 
   var paciente = request.body;
   console.log('Novo paciente: ' + JSON.stringify(paciente));
