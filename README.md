@@ -10,7 +10,7 @@
 
 ### Links de acesso
 
-![Logo Heroku](https://icon-icons.com/icons2/2108/PNG/32/heroku_icon_130912.png)   [Acessar Heroku](https://salvus-crudtest.herokuapp.com)
+![Logo Heroku](https://icon-icons.com/icons2/2108/PNG/32/heroku_icon_130912.png)   [Acessar Heroku](https://salvus-crudtest.herokuapp.com/api/patients)
 
 ![Logo GitHub](https://icon-icons.com/icons2/936/PNG/32/github-logo_icon-icons.com_73546.png) [Acessar GitHub](https://github.com/franciscotarla/crudtest)
 
